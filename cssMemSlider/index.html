@@ -4,10 +4,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&family=Roboto&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico">
   <title>CSS Mem Slider</title>
 </head>
 <body>
+  <div class="container">
+      <input type="radio" name="radio" id="radio-1" checked>
+      <input type="radio" name="radio" id="radio-2">
+      <input type="radio" name="radio" id="radio-3">
+      <input type="radio" name="radio" id="radio-4">
+
+    <div class="slider-top">
+      <div class="slider-items">
+        <div class="slider-item">
+          <img class="slider-img" src="images/mem-1.gif" alt="mem-1">
+        </div>
+        <div class="slider-item">
+          <img class="slider-img" src="images/mem-2.gif" alt="mem-2">
+        </div>
+        <div class="slider-item">
+          <img class="slider-img" src="images/mem-3.gif" alt="mem-3">
+        </div>
+        <div class="slider-item">
+          <img class="slider-img" src="images/mem-4.gif" alt="mem-4">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="slider-bottom">
+      <div class="slider-description">
+        <div class="slider-texts">
+          <p class="slider-text">Когда во вторник прочитал задание RS School на неделю</p>
+          <p class="slider-text">Всю оставшуюся неделю...</p>
+          <p class="slider-text">Понедельник - последний день сдачи проекта</p>
+          <p class="slider-text">Cross-check - проверка работ других студентов</p>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <label for="radio-1" class="slider-btn"></label>
+        <label for="radio-2" class="slider-btn"></label>
+        <label for="radio-3" class="slider-btn"></label>
+        <label for="radio-4" class="slider-btn"></label>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
