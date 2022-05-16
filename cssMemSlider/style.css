@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Caveat', cursive;;
+  font-weight: 400;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background: url('images/pattern.png');
+  background-size: 30%;
+  color: #564966;
+  padding: 1rem;
+}
+
+input {
+  display: none;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.slider {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  align-items: center;
+}
+
+.slider-top {
+  overflow: hidden;
+  max-width: 40rem;
+  grid-column: span 2;
+}
+
+.slider-description {
+  overflow: hidden;
+  max-width: 30rem;
+}
+
+.slider-items,
+.slider-texts {
+  display: flex;
+  width: 400%;
+  transition: all 0.5s;
+}
+
+.slider-item,
+.slider-text {
+  width: 25%;
+}
+
+.slider-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+#radio-1:checked~ .slider-top .slider-items,
+#radio-1:checked~ .slider-description .slider-texts {
+  margin-left: 0;
+}
+
+#radio-2:checked~ .slider-top .slider-items,
+#radio-2:checked~ .slider-description .slider-texts {
+  margin-left: -100%;
+}
+
+#radio-3:checked~ .slider-top .slider-items,
+#radio-3:checked~ .slider-description .slider-texts {
+  margin-left: -200%;
+}
+#radio-4:checked~ .slider-top .slider-items,
+#radio-4:checked~ .slider-description .slider-texts {
+  margin-left: -300%;
+}
+
+.slider-controls {
+  justify-self: end;
+  display: flex;
+}
+
+.slider-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  margin: 0 0.1rem;
+}
+
+.slider-btn {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.1rem solid #564966;
+  background-color: #564966;
+  transition: all 0.5s;
+}
+
+.slider-label:hover .slider-btn{
+  background-color: #251b31;
+  border-color: #251b31;
+}
+
+.slider-label:active .slider-btn{
+  background-color: #fff;
+}
+
+#radio-1:checked~ .slider-controls .slider-label[for="radio-1"] .slider-btn,
+#radio-2:checked~ .slider-controls .slider-label[for="radio-2"] .slider-btn,
+#radio-3:checked~ .slider-controls .slider-label[for="radio-3"] .slider-btn,
+#radio-4:checked~ .slider-controls .slider-label[for="radio-4"] .slider-btn {
+  background-color: #ffd777;
+  border-color: #ffd777;
+}
+
+#radio-1:checked~ .slider-controls .slider-label[for="radio-1"]:hover .slider-btn,
+#radio-2:checked~ .slider-controls .slider-label[for="radio-2"]:hover .slider-btn,
+#radio-3:checked~ .slider-controls .slider-label[for="radio-3"]:hover .slider-btn,
+#radio-4:checked~ .slider-controls .slider-label[for="radio-4"]:hover .slider-btn {
+  border-color: #251b31;
+}
+
+#radio-1:checked~ .slider-controls .slider-label[for="radio-1"]:active .slider-btn,
+#radio-2:checked~ .slider-controls .slider-label[for="radio-2"]:active .slider-btn,
+#radio-3:checked~ .slider-controls .slider-label[for="radio-3"]:active .slider-btn,
+#radio-4:checked~ .slider-controls .slider-label[for="radio-4"]:active .slider-btn {
+  background-color: #fff;
+}
+
+@media (max-width: 500px) {
+  .slider {
+    grid-template: repeat(3, auto) / 1fr;
+    gap: 1rem;
+  }
+
+  .slider-top {
+    grid-column: 1/2;
+  }
+
+  .slider-controls {
+    grid-row: 2/3;
+    justify-self: center;
+  }
+}
